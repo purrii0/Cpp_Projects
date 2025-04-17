@@ -1,20 +1,8 @@
-#include <iostream>
-#include <fstream>
-
+#include <string>
 std::string decryptor(std::string, int);
-
-int main() 
+std::string encryptor(std::string msg, int shift) 
 {
-    int shift, tempShift;
-    std::string msg = "hello! test z";
-    std::cout << "How Much shift do you want: ";
-    std::cin >> shift;
-    if(shift > 26) 
-    {
-        int rem = shift % 26;
-        (rem == 0) ? shift = 26 : shift = rem;
-    }
-    tempShift = shift;
+    int tempShift = shift;
     for (size_t i = 0; '\0' != msg[i]; i++)
     {
         char c = msg[i];
@@ -38,10 +26,6 @@ int main()
         }
         msg[i] = c;
         shift = tempShift;
-    }
-    std::cout << msg << std::endl;
-
-    std::cout << decryptor(msg, shift) << std::endl;
-    
-    return 0;
+    }    
+    return msg;
 }

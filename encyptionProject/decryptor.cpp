@@ -1,5 +1,5 @@
 #include <string>
-#include <iostream>
+std::string encryptor(std::string, int);
 std::string decryptor(std::string n, int shift)
 {
     int tempShift = shift;
