@@ -1,5 +1,4 @@
-#include "./token/tokenType.hpp"
-#include <iostream>
+#include "./headerFiles/tokenType.hpp"
 
 std::string getRegex(TokenType type)
 {

@@ -1,6 +1,7 @@
 #include <map>
 #include <cstring>
 #include <vector>
+#include <iostream>
 #include <regex>
 
 enum class TokenType
